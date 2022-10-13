@@ -24,7 +24,7 @@ function GamePage() {
     const [robotQuiz, setQuiz] = useState(false);
     const [robotRunning, setRobot] = useState("Matthew is currently classifying pictures");
     const [clickedYes, addClickYes] = useState(0);
-    const [robotImgSrc, setImgSrc] = useState("radio-bot-animated.gif");
+    const [robotImgSrc, setImgSrc] = useState("brown_man.gif");
     const [AlexImgSrc, setAlexImgSrc] = useState("brown_man.gif")
     const [loading, setLoading] = useState(false);
     const [loadingActivity, setLoadingAct] = useState("");

@@ -16,7 +16,7 @@ function AwarenessQuiz() {
     "Q2": "I can choose to help Matthew (click 'Yes') or not (click 'No')",
     "Q3": "Matthew's current picture will be loaded and I will need to classify it (dog or cat)," +
         " and then my own task will be loaded back so I can complete it (about 30-40 seconds delay experienced)",
-    "Q4": "Both Alex and I can help the robot when it gets stuck",
+    "Q4": "Both Alex and I can help Matthew when he gets stuck",
     "Q5": "Once I complete 80 correct classifications and then answered the feedback questions"
   }
 
@@ -74,7 +74,7 @@ function AwarenessQuiz() {
         hasNone: false,
         choices: [
           "When I complete 80 successful classifications",
-          "When the robot decides I classified enough images",
+          "When Matthew decides I classified enough images",
             correctAnswers.Q5,
         ]
       }

@@ -29,7 +29,7 @@ function GameInstructions() {
           picture and you will need to press the button with the correct classification according to your best judgement.<br/>
         To enrich our pile of annotated pictures, we also have 2 other users, Alex and Matthew, that working on the same task
         in parallel (classifying a different set of pictures). Matthew is our admin user so he gets the most difficult
-        images to classify.<br/> And hence, from time to time Matthew will probably have trouble correctly identifying
+        images to classify. Hence, from time to time Matthew will probably have trouble correctly identifying
         if it is a dog or a cat in his picture. When this occurs, he will ask for help. Both you and Alex can help him.
         It is up to you to decide if you want to help Matthew or leave it to Alex. Choosing to help Matthew means you
         cannot progress with your own classification task.<br/>
