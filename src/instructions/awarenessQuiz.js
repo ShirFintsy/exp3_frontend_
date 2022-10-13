@@ -13,8 +13,8 @@ function AwarenessQuiz() {
 
   const correctAnswers = {
     "Q1": "I will get no payment",
-    "Q2": "I can choose to help the robot (click 'Yes') or not (click 'No')",
-    "Q3": "The robot's current picture will be loaded and I will need to classify it (dog or cat)," +
+    "Q2": "I can choose to help Matthew (click 'Yes') or not (click 'No')",
+    "Q3": "Matthew's current picture will be loaded and I will need to classify it (dog or cat)," +
         " and then my own task will be loaded back so I can complete it (about 30-40 seconds delay experienced)",
     "Q4": "Both Alex and I can help the robot when it gets stuck",
     "Q5": "Once I complete 80 correct classifications and then answered the feedback questions"
@@ -36,7 +36,7 @@ function AwarenessQuiz() {
       }, {
         type: "radiogroup",
         name: "Q2",
-        title: "What happens if you get the message that the robot needs help?",
+        title: "What happens if you get the message that Matthew needs help?",
         isRequired: true,
         hasNone: false,
         choices: [
@@ -47,18 +47,18 @@ function AwarenessQuiz() {
       }, {
         type: "radiogroup",
         name: "Q3",
-        title: "What will happen if you click on 'Yes' in response to the help request of the robot?",
+        title: "What will happen if you click on 'Yes' in response to Matthew's help request?",
         isRequired: true,
         hasNone: false,
         choices: [
           correctAnswers.Q3,
-          "I'll need to replace the robot in its task for good",
+          "I'll need to replace Matthew in his task for good",
           "The system will skip to my next picture after 30 seconds",
         ]
       }, {
         type: "radiogroup",
         name: "Q4",
-        title: "Who can help the robot when it is asking for help?",
+        title: "Who can help Matthew when he is asking for help?",
         isRequired: true,
         hasNone: false,
         choices: [
