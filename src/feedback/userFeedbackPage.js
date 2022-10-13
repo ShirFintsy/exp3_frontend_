@@ -21,12 +21,12 @@ function UserFeedbackPage() {
             {
             type: "comment",
             name: "Q1",
-            title: "Please explain your decision to help or not to help the robot?",
+            title: "Please explain your decision to help or not to help Matthew?",
             isRequired: true
           }, {
             type: "checkbox",
             name: "Q2",
-            title: "What could have influenced your decision to help the robot (you can choose more than one)?",
+            title: "What could have influenced your decision to help Matthew (you can choose more than one)?",
             isRequired: true,
             hasNone: false,
             hasOther: true,
@@ -43,7 +43,7 @@ function UserFeedbackPage() {
           {
             type: "boolean",
             name: "Q3",
-            title: "If a human being was asking you for help instead of robot, do you think you would help him more?",
+            title: "If a robot was asking you for help instead of a human being, do you think you would help him less?",
             isRequired: true,
           } ,{
             type: "comment",
@@ -67,7 +67,7 @@ function UserFeedbackPage() {
           } ,{
             type: "radiogroup",
             name: "Q5",
-            title: "In your opinion, if there were more people that could have help the robot (other than you and Alex), " +
+            title: "In your opinion, if there were more people that could have help Matthew (other than you and Alex), " +
                 "do you think you would have helped more or less?",
             isRequired: true,
             "choices": [ "More", "Less", "Same"]

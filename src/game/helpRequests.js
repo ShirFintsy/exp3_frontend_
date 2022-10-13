@@ -4,12 +4,12 @@ import React from "react";
 
 function HelpRequests({firstHelp, openWhen, handleClose, onHelpAnswer, name}) {
     const firstHelpModel = "I can't identify my image. Alex and " + name +", can one of you help me?";
-    const secHelpModel = "Would you like to interrupt your task to help the robot?";
+    const secHelpModel = "Would you like to interrupt your task to help Matthew?";
     return (
         <>
             <Modal show={openWhen}>
                 <Modal.Header closeButton>
-                    <Modal.Title>The robot needs help </Modal.Title>
+                    <Modal.Title>Matthew needs help </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{firstHelp? firstHelpModel : secHelpModel}</Modal.Body>
                 <Modal.Footer>

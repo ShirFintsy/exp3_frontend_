@@ -22,13 +22,13 @@ function GamePage() {
     const [waitForImage, setWaitForImage] = useState(false);
     const [needsHelp, setHelpRequest] = useState(false);
     const [robotQuiz, setQuiz] = useState(false);
-    const [robotRunning, setRobot] = useState("Robot is currently classifying pictures");
+    const [robotRunning, setRobot] = useState("Matthew is currently classifying pictures");
     const [clickedYes, addClickYes] = useState(0);
     const [robotImgSrc, setImgSrc] = useState("radio-bot-animated.gif");
-    const [AlexImgSrc, setAlexImgSrc] = useState("man.gif")
+    const [AlexImgSrc, setAlexImgSrc] = useState("brown_man.gif")
     const [loading, setLoading] = useState(false);
     const [loadingActivity, setLoadingAct] = useState("");
-    const [robotAct, setRobotAct] = useState("Switching to robot's task");
+    const [robotAct, setRobotAct] = useState("Switching to Matthew's task");
     const [firstLoading, setFirst] = useState(0);
     const [humanRunning, setHuman] = useState("Alex is classifying pictures");
     const [AlexHelp, setAlexHelp] = useState(false);
@@ -70,7 +70,7 @@ function GamePage() {
                 setLoadingAct("");
             }
             else if (firstLoading === 2){
-                setRobotAct("Switching to the robot's task");
+                setRobotAct("Switching to Matthew's task");
                 setLoadingAct("");
             }
         }, (seconds + 1) * 1000);
@@ -100,7 +100,6 @@ function GamePage() {
      * Notify the server when current user click "yes" on the help request.
      */
     useEffect(() => {
-        // websocket.send(JSON.stringify({"action": "helps", "firstHelp": helpedOnFirst, "session": session}));
         websocket.send(JSON.stringify({"action": "update-click-counter", "yes": clickedYes, "session": session}));
     }, [clickedYes, websocket, session]);
 
@@ -126,13 +125,9 @@ function GamePage() {
     }
 
     /**
-     * Notify the server about the end of the game in current user.
+     * Notify the server about the end of the game in current user and send the help request that the user answered.
      */
     const onCompleteGame = () => {
-        // let array = [];
-        // if (clickedYes === 2) {array = [1,2]; }
-        // else if (clickedYes === 1 && helpedOnFirst === true) { array = [1];}
-        // else if (clickedYes === 1 && helpedOnFirst === false) { array = [2];}
         websocket.send(JSON.stringify({"action": "complete-game", "help-array": helpArray, "session": session}));
         setCompleteGame(true);
     };
@@ -145,7 +140,7 @@ function GamePage() {
     const afterHelp = () => {
         return new Promise(() => {
             setRobot("Thank You!")
-            setTimeout(() => setRobot("Robot is currently classifying pictures"), 21000);
+            setTimeout(() => setRobot("Matthew is currently classifying pictures"), 21000);
             setLoading(true);
             setFirst(2);
             setTimeout(() => {setLoading(false)}, 21000);
@@ -206,11 +201,6 @@ function GamePage() {
         if (score === 50) {setHelpArray(oldArray => [...oldArray, 3]);}
         if (score === 66) {setHelpArray(oldArray => [...oldArray, 4]);}
         //if (score === 19 || score === 31 || score === 50 || score === 58) {
-        // if (firstHelp) { // this is the first help
-        //     setFirstHelp(false);
-        //     setHelpedOnFirst(true);
-        // }
-        //setHelpRequest(false);
         setClickedNext(false);
         setQuiz(true);
         setRobot("");
@@ -230,13 +220,12 @@ function GamePage() {
         //setHelpRequest(false);
         setClickedNext(false);
         setRobot("");
-        setImgSrc("radio-bot-animated.gif");
+        setImgSrc("brown_man.gif");
     }
 
     const firstModel = () => {
          setHelpRequest(false);
          setClickedNext(true);
-         console.log("clicked next is true");
      }
 
     return (
