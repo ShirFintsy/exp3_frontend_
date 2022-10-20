@@ -6,7 +6,7 @@ function TheQuiz({quizType, imgSrc, onTagButtonCat, onTagButtonDog}) {
     return(
        <div className={quizType ? "robot-quiz" : null}>
            {quizType ?
-               <h1>The Robot Quiz</h1> :
+               <h1>Matthew's Quiz</h1> :
                <></>
            }
            <h2>Please classify the following image</h2>
